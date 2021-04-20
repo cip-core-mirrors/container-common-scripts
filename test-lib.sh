@@ -587,9 +587,11 @@ ct_get_public_image_name() {
   elif [ "x$os" == "xrhel8" ]; then
     public_image_name=$registry/rhel8/$base_image_name-${version//./}
   elif [ "x$os" == "xcentos7" ]; then
-    public_image_name=$registry/centos7/$base_image_name-${version//./}-centos7
+    public_image_name=$registry/cip-core-platform/$base_image_name-${version//./}-centos7
   elif [ "x$os" == "xcentos8" ]; then
-    public_image_name=$registry/centos8/$base_image_name-${version//./}-centos8
+    public_image_name=$registry/cip-core-platform/$base_image_name-${version//./}-centos8
+  elif [ "x$os" == "xcentos8stream" ]; then
+    public_image_name=$registry/cip-core-platform/$base_image_name-${version//./}-centos8stream
   fi
 
   echo "$public_image_name"

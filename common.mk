@@ -35,6 +35,10 @@ ifeq ($(TARGET),rhel8)
 	SKIP_SQUASH ?= 1
 	OS := rhel8
 	DOCKERFILE ?= Dockerfile.rhel8
+else ifeq ($(TARGET),rhel8-init)
+	SKIP_SQUASH ?= 1
+	OS := rhel8-init
+	DOCKERFILE ?= Dockerfile.rhel8-init
 else ifeq ($(TARGET),rhel7)
 	SKIP_SQUASH ?= 0
 	OS := rhel7

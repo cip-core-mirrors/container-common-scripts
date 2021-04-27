@@ -235,6 +235,8 @@ for dir in ${dirs}; do
   pushd "${dir}" > /dev/null
   if [ "$OS" == "rhel8" ] || [ "$OS" == "rhel8-candidate" ]; then
     docker_build_with_version Dockerfile.rhel8
+  elif [ "$OS" == "rhel8-init" ]; then
+    docker_build_with_version Dockerfile.rhel8-init
   elif [ "$OS" == "rhel7" ] || [ "$OS" == "rhel7-candidate" ]; then
     docker_build_with_version Dockerfile.rhel7
   elif [ "$OS" == "fedora" ] || [ "$OS" == "fedora-candidate" ]; then

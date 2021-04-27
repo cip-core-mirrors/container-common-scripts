@@ -76,6 +76,10 @@ parse_rules() {
                     if ! [[ "$DG_CONF" =~ rhel-8-x86_64.yaml ]]; then
                         continue
                     fi
+                elif [[ "$dest" == "Dockerfile.rhel8-init" ]]; then
+                    if ! [[ "$DG_CONF" =~ rhel-8-x86_64.yaml ]]; then
+                        continue
+                    fi
                 elif [[ "$dest" == "Dockerfile.centos8" ]]; then
                     if ! [[ "$DG_CONF" =~ centos-8-x86_64.yaml ]]; then
                         continue
